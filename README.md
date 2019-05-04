@@ -2,13 +2,13 @@
 
 Работа с Api
 
-smsUnisender.php – класс
+SmsBy.php – класс
 
 examples.php – 3 примера по использованию: Отправка простого сообщения, Отправка сообщения с паролем от альфа-имени, Получение списка своих сообщений.
 
 При создании объекта класса в конструктор передаётся token:
 
-$sms = new smsUnisender($token);
+$sms = new SmsBy($token);
 
 Дальше можно пользоваться методом sendRequest($command, $params=array()). В него передаётся 2 параметра. Первый – команда, которую нужно выполнить (getLimit, createSmsMessage, sendSms, …), второй – массив с параметрами, которые нужно передать команде, без token (если команде нужны параметры), например для команды createSMSMessage: array(‘message’=>’My message’, ‘alphaname_id’=>123).
 
